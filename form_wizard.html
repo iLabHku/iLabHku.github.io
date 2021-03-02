@@ -7,7 +7,7 @@
   <meta name="author" content="ThemeBucket">
   <link rel="shortcut icon" href="#" type="image/png">
 
-  <title>Editable Table</title>
+  <title>Inquire Form</title>
 
   <!--data table-->
   <link rel="stylesheet" href="js/data-tables/DT_bootstrap.css" />
@@ -325,7 +325,7 @@
             </h3>
             <ul class="breadcrumb">
                 <li>
-                    <a href="#">Operation Management</a>
+                    <a href="#">Form Management</a>
                 </li>
                 <li class="active">Inquire</li>
             </ul>
@@ -366,144 +366,55 @@
                 <table class="table table-striped table-hover table-bordered" id="editable-sample">
                 <thead>
                 <tr>
-                    <th>Transaction ID</th>
-                    <th>Name</th>
-                    <th>Publisher</th>
-                    <th>Quantity</th>
-                    <th>Operation</th>
-                    <th>Operation Time</th>
-                    <th>Publish Time</th>
-                    <th>Record Hash</th>
+                    <th>Form ID</th>
+                    <th>Form Name</th>
+                    <th>Form Type</th>
+                    <th>Submit Time</th>
+                    <th>Finished Time</th>
+                    <th>Form Detail</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr class="">
-                    <td>MSR0001</td>
-                    <td>Transportation Execution</td>
-                    <td>Transporter</td>
-                    <td>4</td>
-                    <td>Transportation Status Update</td>
+                    <td>FID0001</td>
+                    <td>Wall Sheeting</td>
+                    <td>Inspection and Test Plan</td>
                     <td class="center">10/08/2020</td>
                     <td class="center">10/22/2020</td>
-                    <td><a class="delete" href="javascript:;">Details</a></td>
+                    <td><a  href="./forms/WallSheeting.html">Check</a></td>
                 </tr>
                 <tr class="">
-                    <td>MSR0001</td>
-                    <td>Transportation Execution</td>
-                    <td>Transporter</td>
-                    <td>4</td>
-                    <td>Transportation Status Update</td>
-                    <td class="center">10/10/2020</td>
-                    <td class="center">10/23/2020</td>
-                    <td><a class="delete" href="javascript:;">Details</a></td>
-                </tr>
-                <tr class="">
-                    <td>MSR0001</td>
-                    <td>Transportation Execution</td>
-                    <td>Transporter</td>
-                    <td>4</td>
-                    <td>Product and Loading Inspection</td>
-                    <td class="center">10/12/2020</td>
-                    <td class="center">10/26/2020</td>
-                    <td><a class="delete" href="javascript:;">Details</a></td>
-                </tr>
-                <tr class="">
-                    <td>MSR0001</td>
-                    <td>Transportation preparation</td>
-                    <td>Manufacturer</td>
-                    <td>4</td>
-                    <td>Loading Record</td>
+                    <td>FID0002</td>
+                    <td>Rockwool Installation</td>
+                    <td>Inspection and Test Plan</td>
+                    <td class="center">10/08/2020</td>
                     <td class="center">10/22/2020</td>
-                    <td class="center">10/29/2020</td>
-                    <td><a class="delete" href="javascript:;">Details</a></td>
+                    <td><a href="./forms/RockwoolInstallation.html">Check</a></td>
                 </tr>
                 <tr class="">
-                    <td>TSR0001</td>
-                    <td>Product Receiving</td>
-                    <td>Contractor</td>
-                    <td>4</td>
-                    <td>Product Inspection</td>
-                    <td class="center">10/23/2020</td>
-                    <td class="center">10/30/2020</td>
-                    <td><a class="delete" href="javascript:;">Details</a></td>
-                </tr>
-                <!-- <tr class="">
-                    <td>TSR0001</td>
-                    <td>Rebar</td>
-                    <td>Supplier</td>
-                    <td></td>
-                    <td>100</td>
-                    <td>Rebar Delivery</td>
-                    <td class="center">10/24/2020</td>
-                    <td>10/26/2020</td>
-                    <td><a class="delete" href="javascript:;">Details</a></td>
-                </tr>
-                <tr class="">
-                    <td>MSR0001</td>
-                    <td>Structure</td>
-                    <td>Manufacturer</td>
-                    <td></td>
-                    <td>10</td>
-                    <td>2D Panel Hot Dip Galvanizing Treatment</td>
-                    <td class="center">10/28/2020</td>
-                    <td>10/29/2020</td>
-                    <td><a class="delete" href="javascript:;">Details</a></td>
-                </tr>
-                <tr class="">
-                    <td>MSR0001</td>
-                    <td>Structure</td>
-                    <td>Manufacturer</td>
-                    <td></td>
-                    <td>1</td>
-                    <td>3D Assembly including Welding Work for Bondek, Shear Stud, Bracket, Wall & CeilingSheet</td>
-                    <td class="center">10/30/2020</td>
-                    <td>11/03/2020</td>
-                    <td><a class="delete" href="javascript:;">Grade Details</a></td>
-                </tr>
-                <tr class="">
-                    <td>MSR0001</td>
-                    <td>Structure</td>
-                    <td>Manufacturer</td>
-                    <td></td>
-                    <td>1</td>
-                    <td>Touch-up Galvanized Paint (Zinc Rich Primer)</td>
-                    <td class="center">10/24/2020</td>
-                    <td>10/26/2020</td>
-                    <td><a class="delete" href="javascript:;">Grade Details</a></td>
-                </tr>
-                <tr class="">
-                    <td>MSR0001</td>
-                    <td>Board</td>
-                    <td>Contractor</td>
-                    <td>Hold Point</td>
-                    <td></td>
-                    <td>Material Grade and Size Spot Check</td>
+                    <td>FID0003</td>
+                    <td>Wall Sheeting</td>
+                    <td>Inspection and Test Plan</td>
+                    <td class="center">10/08/2020</td>
                     <td class="center">10/22/2020</td>
-                    <td>10/23/2020</td>
-                    <td><a class="delete" href="javascript:;">Grade Details</a></td>
+                    <td><a  href="/forms/WallSheeting.html">Check</a></td>
                 </tr>
                 <tr class="">
-                    <td>MSR0001</td>
-                    <td>Structure</td>
-                    <td>Contractor</td>
-                    <td>Hold Point</td>
-                    <td></td>
-                    <td>2D Panel Weld Test, Visual Inspection (Butt Weld and Filet Weld) </td>
-                    <td class="center">10/29/2020</td>
-                    <td>10/30/2020</td>
-                    <td><a class="delete" href="javascript:;">Grade Details</a></td>
+                    <td>FID0004</td>
+                    <td>Wall Sheeting</td>
+                    <td>Inspection and Test Plan</td>
+                    <td class="center">10/08/2020</td>
+                    <td class="center">10/22/2020</td>
+                    <td><a  href="/forms/WallSheeting.html">Check</a></td>
                 </tr>
                 <tr class="">
-                    <td>MSR0001</td>
-                    <td>Structure</td>
-                    <td>Contractor</td>
-                    <td>Hold Point</td>
-                    <td></td>
-                    <td>Cladding Sub Frame Alignment Check</td>
-                    <td class="center">11/04/2020</td>
-                    <td>11/05/2020</td>
-                    <td><a class="delete" href="javascript:;">Grade Details</a></td>
-                </tr> -->
+                    <td>FID0005</td>
+                    <td>Wall Sheeting</td>
+                    <td>Inspection and Test Plan</td>
+                    <td class="center">10/08/2020</td>
+                    <td class="center">10/22/2020</td>
+                    <td><a  href="/forms/WallSheeting.html">Check</a></td>
+                </tr>
                 
                 </tbody>
                 </table>
