@@ -3,14 +3,29 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="keywords" content="admin, dashboard, bootstrap, template, flat, modern, theme, responsive, fluid, retina, backend, html5, css, css3">
   <meta name="description" content="">
   <meta name="author" content="ThemeBucket">
   <link rel="shortcut icon" href="#" type="image/png">
 
   <title>Working Status</title>
 
-  <link href="css/style.css" rel="stylesheet">
-  <link href="css/style-responsive.css" rel="stylesheet">
+<!--icheck-->
+<link href="js/iCheck/skins/minimal/minimal.css" rel="stylesheet">
+<link href="js/iCheck/skins/square/square.css" rel="stylesheet">
+<link href="js/iCheck/skins/square/red.css" rel="stylesheet">
+<link href="js/iCheck/skins/square/blue.css" rel="stylesheet">
+
+<!--dashboard calendar-->
+<link href="css/clndr.css" rel="stylesheet">
+
+<!--Morris Chart CSS -->
+<link rel="stylesheet" href="js/morris-chart/morris.css">
+
+<!--common-->
+<link href="css/style.css" rel="stylesheet">
+<link href="css/style-responsive.css" rel="stylesheet">
+
 
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
@@ -43,7 +58,7 @@
                     <div class="media logged-user">
                         <img alt="" src="images/photos/user-avatar.png" class="media-object">
                         <div class="media-body">
-                            <h4><a href="#">Jeremy Zhao</a></h4>
+                            <h4><a href="#">Admin</a></h4>
                             <span>"Hello There..."</span>
                         </div>
                     </div>
@@ -210,7 +225,7 @@
                                 <a href="">
                                     <span class="thumb"><img src="images/photos/user1.png" alt="" /></span>
                                         <span class="desc">
-                                          <span class="name">Jeremy Zhao <span class="badge badge-success">new</span></span>
+                                          <span class="name">Admin <span class="badge badge-success">new</span></span>
                                           <span class="msg">Lorem ipsum dolor sit amet...</span>
                                         </span>
                                 </a>
@@ -298,7 +313,7 @@
                 <li>
                     <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                         <img src="images/photos/user-avatar.png" alt="" />
-                        Jeremy Zhao
+                        Admin
                         <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-usermenu pull-right">
@@ -332,137 +347,146 @@
         <!--body wrapper start-->
         <div class="wrapper">
             <div class="row">
-                <div class="panel">
-                    <header class="panel-heading">
-                        goal progress
+                <div class="col-sm-12">
+                    <section class="panel">
+                        <header class="panel-heading">
+                            Project Progress
                         <span class="tools pull-right">
                             <a href="javascript:;" class="fa fa-chevron-down"></a>
                             <a href="javascript:;" class="fa fa-times"></a>
                          </span>
-                    </header>
-                    <div class="panel-body">
-                        <ul class="goal-progress">
-                            <li>
-                                <div class="prog-avatar">
-                                    <img src="images/photos/user1.png" alt=""/>
-                                </div>
-                                <div class="details">
-                                    <div class="title">
-                                        <a href="#">John Doe</a> - Project Lead
-                                    </div>
-                                    <div class="progress progress-xs">
-                                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
-                                            <span class="">70%</span>
+                        </header>
+                        <div class="panel-body">
+                            <div id="graph-line"></div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="panel">
+                        <header class="panel-heading">
+                            goal progress
+                            <span class="tools pull-right">
+                                <a href="javascript:;" class="fa fa-chevron-down"></a>
+                                <a href="javascript:;" class="fa fa-times"></a>
+                             </span>
+                        </header>
+                        <div class="panel-body">
+                            <ul class="goal-progress">
+                                <li>
+                                    <div class="details">
+                                        <div class="title">
+                                             Designer
+                                        </div>
+                                        <div class="progress progress-xs">
+                                            <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
+                                                <span class="">70%</span>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="prog-avatar">
-                                    <img src="images/photos/user2.png" alt=""/>
-                                </div>
-                                <div class="details">
-                                    <div class="title">
-                                        <a href="#">Cameron Doe</a> - Sales
-                                    </div>
-                                    <div class="progress progress-xs">
-                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 91%">
-                                            <span class="">91%</span>
+                                </li>
+                                <li>
+                                    <div class="details">
+                                        <div class="title">
+                                            Manufacturers
+                                        </div>
+                                        <div class="progress progress-xs">
+                                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 91%">
+                                                <span class="">91%</span>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="prog-avatar">
-                                    <img src="images/photos/user3.png" alt=""/>
-                                </div>
-                                <div class="details">
-                                    <div class="title">
-                                        <a href="#">Hoffman Doe</a> - Support
-                                    </div>
-                                    <div class="progress progress-xs">
-                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                                            <span class="">40%</span>
+                                </li>
+                                <li>
+                                    <div class="details">
+                                        <div class="title">
+                                            Suppliers
+                                        </div>
+                                        <div class="progress progress-xs">
+                                            <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                                <span class="">40%</span>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="prog-avatar">
-                                    <img src="images/photos/user4.png" alt=""/>
-                                </div>
-                                <div class="details">
-                                    <div class="title">
-                                        <a href="#">Jane Doe</a> - Marketing
-                                    </div>
-                                    <div class="progress progress-xs">
-                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-                                            <span class="">20%</span>
+                                </li>
+                                <li>
+                                    <div class="details">
+                                        <div class="title">
+                                            Transporters
+                                        </div>
+                                        <div class="progress progress-xs">
+                                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                                <span class="">20%</span>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="prog-avatar">
-                                    <img src="images/photos/user5.png" alt=""/>
-                                </div> 
-                                <div class="details">
-                                    <div class="title">
-                                        <a href="#">Hoffman Doe</a> - Support
-                                    </div>
-                                    <div class="progress progress-xs">
-                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
-                                            <span class="">45%</span>
+                                </li>
+                                <li>
+                                    <div class="details">
+                                        <div class="title">
+                                            Contractors
+                                        </div>
+                                        <div class="progress progress-xs">
+                                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
+                                                <span class="">45%</span>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </li>
-                        </ul>
-                        <div class="text-center"><a href="#">View all Goals</a></div>
+                                </li>
+                            </ul>
+
+                        </div>
                     </div>
                 </div>
-
-            </div>
-            <div class="row">
                 <div class="col-sm-6">
                     <section class="panel">
                         <header class="panel-heading">
-                            Real Time Chart
+                            Latest Progress
                         <span class="tools pull-right">
                             <a href="javascript:;" class="fa fa-chevron-down"></a>
                             <a href="javascript:;" class="fa fa-times"></a>
                          </span>
                         </header>
                         <div class="panel-body">
-                            <div id="reatltime-chart">
-                                <div id="reatltime-chartContainer" style="width:100%;height:300px; text-align: center; margin:0 auto;">
-                                </div>
-                            </div>
+                            <div id="graph-donut"></div>
                         </div>
                     </section>
                 </div>
+            </div>
+            <div class="row">
                 <div class="col-sm-6">
                     <section class="panel">
                         <header class="panel-heading">
-                            Combined Chart
+                            Passing Rate
                         <span class="tools pull-right">
                             <a href="javascript:;" class="fa fa-chevron-down"></a>
                             <a href="javascript:;" class="fa fa-times"></a>
                          </span>
                         </header>
                         <div class="panel-body">
-                            <div id="combine-chart">
-                                <div id="legendcontainer26" class="legend-block">
-                                </div>
-                                <div id="combine-chartContainer" style="width: 100%;height:300px; text-align: center; margin:0 auto;">
-                                </div>
-                            </div>
+                            <div id="graph-donut-passingRate"></div>
                         </div>
                     </section>
                 </div>
+                <div class="col-sm-6">
+                    <section class="panel">
+                        <header class="panel-heading">
+                            Area Chart
+                        <span class="tools pull-right">
+                            <a href="javascript:;" class="fa fa-chevron-down"></a>
+                            <a href="javascript:;" class="fa fa-times"></a>
+                         </span>
+                        </header>
+                        <div class="panel-body">
+                            <div id="graph-area-line"></div>
+                        </div>
+                    </section>
+                </div>
+
             </div>
 
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col-sm-12">
                     <section class="panel">
                         <header class="panel-heading">
@@ -480,99 +504,7 @@
                         </div>
                     </section>
                 </div>
-            </div>
-
-            <div class="row">
-                <div class="col-sm-6">
-                    <section class="panel">
-                        <header class="panel-heading">
-                            Pie Chart
-                        <span class="tools pull-right">
-                            <a href="javascript:;" class="fa fa-chevron-down"></a>
-                            <a href="javascript:;" class="fa fa-times"></a>
-                         </span>
-                        </header>
-                        <div class="panel-body">
-                            <div id="pie-chart" class="pie-chart">
-                                <div id="pie-chartContainer" style="width: 100%;height:400px; text-align: left;">
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-                <div class="col-sm-6">
-                    <section class="panel">
-                        <header class="panel-heading">
-                            Donut Chart
-                        <span class="tools pull-right">
-                            <a href="javascript:;" class="fa fa-chevron-down"></a>
-                            <a href="javascript:;" class="fa fa-times"></a>
-                         </span>
-                        </header>
-                        <div class="panel-body">
-                            <div id="pie-chart-donut" class="pie-chart">
-                                <div id="pie-donutContainer" style="width: 100%;height:400px; text-align: left;">
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-            </div>
-
-
-
-            <div class="row">
-                <div class="col-sm-12">
-                    <section class="panel">
-                        <header class="panel-heading">
-                            Toggle Chart
-                        <span class="tools pull-right">
-                            <a href="javascript:;" class="fa fa-chevron-down"></a>
-                            <a href="javascript:;" class="fa fa-times"></a>
-                         </span>
-                        </header>
-                        <div class="panel-body">
-                            <div id="toggle-chart">
-                                <div class="clearfix">
-                                    <form class="form-horizontal pull-left chart-control">
-                                        <div class="control-group">
-                                            <label class="control-label">Chart Type :</label>
-                                            <div class="series-list">
-                                                <label class="checkbox inline">
-                                                    <input id="chartType1" checked name="ct" type="radio" value="line"/>
-                                                    Line Chart</label>
-                                                <label class="checkbox inline">
-                                                    <input id="chartType2" name="ct" type="radio" value="bar"/>
-                                                    Bar Chart </label>
-                                            </div>
-                                        </div>
-                                    </form>
-                                    <form class="form-horizontal chart-control pull-right chart-control">
-                                        <div class="control-group ">
-                                            <label class="control-label"> Toggle series :</label>
-                                            <div class="series-list">
-                                                <label class="checkbox inline">
-                                                    <input type="checkbox" id="cbdata1" checked>
-                                                    data1</label>
-                                                <label class="checkbox inline">
-                                                    <input type="checkbox" id="cbdata2" checked>
-                                                    data2 </label>
-                                                <label class="checkbox inline">
-                                                    <input type="checkbox" id="cbdata3" checked>
-                                                    data3 </label>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                                <div id="legendPlaceholder20">
-                                </div>
-                                <div id="toggle-chartContainer" style="width: 100%;height:300px; text-align: left;">
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-            </div>
+            </div> -->
         </div>
         <!--body wrapper end-->
 
@@ -607,6 +539,30 @@
 
 <!--common scripts for all pages-->
 <script src="js/scripts.js"></script>
+
+<!--Morris Chart-->
+<!--Morris Chart-->
+<script src="js/morris-chart/morris.js"></script>
+<script src="js/morris-chart/raphael-min.js"></script>
+<script src="js/morris-chart/morris.init.js"></script>
+
+<!--Calendar-->
+<script src="js/calendar/clndr.js"></script>
+<script src="js/calendar/evnt.calendar.init.js"></script>
+<script src="js/calendar/moment-2.2.1.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+
+<!--easy pie chart-->
+<script src="js/easypiechart/jquery.easypiechart.js"></script>
+<script src="js/easypiechart/easypiechart-init.js"></script>
+
+<!--Sparkline Chart-->
+<script src="js/sparkline/jquery.sparkline.js"></script>
+<script src="js/sparkline/sparkline-init.js"></script>
+
+<!--icheck -->
+<script src="js/iCheck/jquery.icheck.js"></script>
+<script src="js/icheck-init.js"></script>
 
 </body>
 </html>
