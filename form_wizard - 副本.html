@@ -7,7 +7,10 @@
   <meta name="author" content="ThemeBucket">
   <link rel="shortcut icon" href="#" type="image/png">
 
-  <title>Web Bim</title>
+  <title>Inquire Form</title>
+
+  <!--data table-->
+  <link rel="stylesheet" href="js/data-tables/DT_bootstrap.css" />
 
   <link href="css/style.css" rel="stylesheet">
   <link href="css/style-responsive.css" rel="stylesheet">
@@ -17,14 +20,6 @@
   <script src="js/html5shiv.js"></script>
   <script src="js/respond.min.js"></script>
   <![endif]-->
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
- 
-  <link rel="stylesheet" href="https://cache.amap.com/lbs/static/main1119.css"/>
-  <script type="text/javascript"
-          src="https://webapi.amap.com/maps?v=1.4.15&key=您申请的key值"></script>
-  <script type="text/javascript" src="https://cache.amap.com/lbs/static/addToolbar.js"></script>
 </head>
 
 <body class="sticky-header">
@@ -35,11 +30,11 @@
 
             <!--logo and iconic logo start-->
             <div class="logo">
-                <a href="1Main_page.html"><img src="images/logo.png" alt=""></a>
+                <a href="mainlayout.html"><img src="images/logo.png" alt=""></a>
             </div>
 
             <div class="logo-icon text-center">
-                <a href="1Main_page.html"><img src="images/logo_icon.png" alt=""></a>
+                <a href="mainlayout.html"><img src="images/logo_icon.png" alt=""></a>
             </div>
             <!--logo and iconic logo end-->
 
@@ -312,37 +307,142 @@
         <!-- page heading start-->
         <div class="page-heading">
             <h3>
-                Web BIM
+                Inquire
             </h3>
             <ul class="breadcrumb">
                 <li>
-                    <a href="#"> System Overview</a>
+                    <a href="#">Form Management</a>
                 </li>
-                <li class="active"> Web BIM </li>
+                <li class="active">Inquire</li>
             </ul>
         </div>
         <!-- page heading end-->
 
         <!--body wrapper start-->
         <div class="wrapper">
-
-            <div class="row">
-                <div class="col-lg-12">
-                    <section class="panel">
-                        <header class="panel-heading">
-                            Web BIM
-                              <span class="tools pull-right">
-                                <a href="javascript:;" class="fa fa-chevron-down"></a>
-                                <a href="javascript:;" class="fa fa-times"></a>
-                            </span>
-                        </header>
-
-
-                                <div id="domId" style="width:auto; height: 800px;"></div>
-
-                    </section>
+             <div class="row">
+                <div class="col-sm-12">
+                <section class="panel">
+                <!-- <header class="panel-heading">
+                    Editable Table
+                    <span class="tools pull-right">
+                        <a href="javascript:;" class="fa fa-chevron-down"></a>
+                        <a href="javascript:;" class="fa fa-times"></a>
+                     </span>
+                </header> -->
+                <div class="panel-body">
+                <div class="adv-table editable-table ">
+                <div class="clearfix">
+                    <div class="btn-group">
+                        <button id="editable-sample_new" class="btn btn-primary">
+                            Export to Excel <i class="fa fa-arrow-circle-o-down"></i>
+                        </button>
+                    </div>
+                    <div class="btn-group pull-right">
+                        <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
+                        </button>
+                        <ul class="dropdown-menu pull-right">
+                            <li><a href="#">Print</a></li>
+                            <li><a href="#">Save as PDF</a></li>
+                            <li><a href="#">Export to Excel</a></li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
+                <div class="space15"></div>
+                <table class="table table-striped table-hover table-bordered" id="editable-sample">
+                <thead>
+                <tr>
+                    <th>Form ID</th>
+                    <th>Form Name</th>
+                    <th>Form Type</th>
+                    <th>Submit Time</th>
+                    <th>Finished Time</th>
+                    <th>Progress</th>
+                    <th>Form Detail</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="">
+                    <td>FID0001</td>
+                    <td>Wall Sheeting</td>
+                    <td>Inspection and Test Plan</td>
+                    <td class="center">10/08/2020</td>
+                    <td class="center">10/22/2020</td>
+                    <td>
+
+                        <div class="progress progress-striped active progress-sm">
+                            <div style="width: 80%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="45" role="progressbar" class="progress-bar progress-bar-success">
+                                <span >80%</span>
+                            </div>
+                        </div>
+
+                    </td>
+                    <td><a  href="./forms/WallSheeting.html">Check</a></td>
+                </tr>
+                <tr class="">
+                    <td>FID0002</td>
+                    <td>Rockwool Installation</td>
+                    <td>Inspection and Test Plan</td>
+                    <td class="center">01/08/2021</td>
+                    <td class="center">01/12/2021</td>
+                    <td>                                    
+                        <div class="progress progress-striped active">
+                        <div style="width: 60%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="60" role="progressbar" class="progress-bar">
+                            60%
+                        </div>
+                    </div></td>
+                    <td><a href="./forms/RockwoolInstallation.html">Check</a></td>
+                </tr>
+                <tr class="">
+                    <td>FID0003</td>
+                    <td>Waterproofing</td>
+                    <td>Inspection and Test Plan</td>
+                    <td class="center">01/18/2021</td>
+                    <td class="center">01/19/2021</td>
+                    <td>                                    
+                        <div class="progress progress-striped active">
+                        <div style="width: 40%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="60" role="progressbar" class="progress-bar">
+                            40%
+                        </div>
+                    </div></td>
+                    <td><a  href="/forms/WallSheeting.html">Check</a></td>
+                </tr>
+                <tr class="">
+                    <td>FID0004</td>
+                    <td>Washroom Wall Floor Tiling</td>
+                    <td>Inspection and Test Plan</td>
+                    <td class="center">02/01/2021</td>
+                    <td class="center">02/03/2021</td>
+                    <td>                                    
+                        <div class="progress progress-striped active">
+                        <div style="width: 35%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="60" role="progressbar" class="progress-bar">
+                            35%
+                        </div>
+                    </div></td>
+                    <td><a  href="/forms/WallSheeting.html">Check</a></td>
+                </tr>
+                <tr class="">
+                    <td>FID0005</td>
+                    <td>Door</td>
+                    <td>Inspection and Test Plan</td>
+                    <td class="center">02/10/2021</td>
+                    <td class="center">02/11/2021</td>
+                    <td>                                    
+                        <div class="progress progress-striped active">
+                        <div style="width: 10%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="60" role="progressbar" class="progress-bar">
+                            10%
+                        </div>
+                    </div></td>
+                    <td><a  href="/forms/WallSheeting.html">Check</a></td>
+                </tr>
+                
+                </tbody>
+                </table>
+                </div>
+                </div>
+                </section>
+                </div>
+                </div>
         </div>
         <!--body wrapper end-->
 
@@ -365,34 +465,21 @@
 <script src="js/modernizr.min.js"></script>
 <script src="js/jquery.nicescroll.js"></script>
 
-<!--Google Map-->
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
-<script src="js/google-map/gmaps.js"></script>
-<script src="js/google-map/gmaps-init.js"></script>
+<!--data table-->
+<script type="text/javascript" src="js/data-tables/jquery.dataTables.js"></script>
+<script type="text/javascript" src="js/data-tables/DT_bootstrap.js"></script>
 
 <!--common scripts for all pages-->
 <script src="js/scripts.js"></script>
 
-<script src="https://static.bimface.com/api/BimfaceSDKLoader/BimfaceSDKLoader@latest-release.js" charset="utf-8"></script>
+<!--script for editable table-->
+<script src="js/editable-table.js"></script>
+
+<!-- END JAVASCRIPTS -->
 <script>
-    var viewer3D;
-    var app;
-    var viewToken = 'c4b4464e28ed4752900d585050967211';
-    var loaderConfig = new BimfaceSDKLoaderConfig();
-        loaderConfig.viewToken = viewToken;
-    BimfaceSDKLoader.load(loaderConfig, successCallback, failureCallback);
-        function successCallback(viewMetaData) {
-            var domShow = document.getElementById('domId');
-            var webAppConfig = new Glodon.Bimface.Application.WebApplication3DConfig();
-                webAppConfig.domElement = domShow;    
-            app = new Glodon.Bimface.Application.WebApplication3D(webAppConfig);    
-            app.addView(viewToken);
-            viewer3D = app.getViewer();    
-        };
-        
-        function failureCallback(error) {
-            console.log(error);
-        };
+    jQuery(document).ready(function() {
+        EditableTable.init();
+    });
 </script>
 
 </body>
